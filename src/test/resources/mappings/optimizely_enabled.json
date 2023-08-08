@@ -1,0 +1,79 @@
+{
+  "scenarioName": "Optimizely dynamic",
+  "requiredScenarioState": "Started",
+  "newScenarioState": "Started2",
+  "request": {
+    "urlPattern": "/optimizely/FAKE_KEY.json",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "accountId": "21023511730",
+      "projectId": "23900040109",
+      "revision": "33",
+      "attributes": [],
+      "audiences": [],
+      "version": "4",
+      "events": [
+        {
+          "id": "23981080048",
+          "experimentIds": [
+            "9300000286994"
+          ],
+          "key": "click"
+        }
+      ],
+      "anonymizeIP": true,
+      "botFiltering": false,
+      "typedAudiences": [],
+      "variables": [],
+      "environmentKey": "development",
+      "sdkKey": "FAKE_KEY",
+      "featureFlags": [
+        {
+          "id": "101942",
+          "key": "targetfilereceiver",
+          "rolloutId": "rollout-101942-23928970095",
+          "experimentIds": [],
+          "variables": []
+        }
+      ],
+      "rollouts": [
+        {
+          "id": "rollout-101942-23928970095",
+          "experiments": [
+            {
+              "id": "default-rollout-101942-23928970095",
+              "key": "default-rollout-101942-23928970095",
+              "status": "Running",
+              "layerId": "rollout-101942-23928970095",
+              "variations": [
+                {
+                  "id": "324026",
+                  "key": "on",
+                  "featureEnabled": true,
+                  "variables": []
+                }
+              ],
+              "trafficAllocation": [
+                {
+                  "entityId": "324026",
+                  "endOfRange": 10000
+                }
+              ],
+              "forcedVariations": {},
+              "audienceIds": [],
+              "audienceConditions": []
+            }
+          ]
+        }
+      ],
+      "experiments": [],
+      "groups": []
+    }
+  }
+}

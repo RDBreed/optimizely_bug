@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.2'
+    id 'io.spring.dependency-management' version '1.1.2'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-json'
+    implementation 'com.optimizely.ab:core-api:4.0.0-beta'// latest non-beta, 3.10.4 also does not work
+    implementation 'com.optimizely.ab:core-httpclient-impl:4.0.0-beta'
+    testImplementation ('org.springframework.boot:spring-boot-starter-test'){
+        exclude group: "com.vaadin.external.google", module: "android-json"
+    }
+    testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock:4.0.2'
+    testImplementation 'org.awaitility:awaitility:4.2.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

@@ -1,0 +1,14 @@
+{
+  "scenarioName": "Optimizely dynamic",
+  "requiredScenarioState": "NotModified",
+  "request": {
+    "urlPattern": "/optimizely/FAKE_KEY.json",
+    "method": "GET"
+  },
+  "response": {
+    "status": 304,
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
