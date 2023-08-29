@@ -1,7 +1,7 @@
 {
   "scenarioName": "Optimizely dynamic",
   "requiredScenarioState": "Started",
-  "newScenarioState": "Started2",
+  "newScenarioState": "Disabled",
   "request": {
     "urlPattern": "/optimizely/FAKE_KEY.json",
     "method": "GET"
